@@ -34,6 +34,14 @@ let ContactsController = class ContactsController {
             throw new common_1.HttpException('No contact with ' + name, common_1.HttpStatus.NOT_FOUND);
         return response;
     }
+    async findByemail(emailId) {
+        console.log(emailId);
+        const response = await this.contactsService.findByEmail(emailId);
+        console.log(response);
+        if (!response)
+            throw new common_1.HttpException('No contact with ' + emailId, common_1.HttpStatus.NOT_FOUND);
+        return response;
+    }
     async deleteByName(name) {
         const response = await this.contactsService.deleteByName(name);
         if (!response)
@@ -60,12 +68,19 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], ContactsController.prototype, "findAll", null);
 __decorate([
-    common_1.Get(':name'),
+    common_1.Get('name/:name'),
     __param(0, common_1.Param('name')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], ContactsController.prototype, "findByName", null);
+__decorate([
+    common_1.Get('email/:emailId'),
+    __param(0, common_1.Param('emailId')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Promise)
+], ContactsController.prototype, "findByemail", null);
 __decorate([
     common_1.Delete(':name'),
     __param(0, common_1.Param('name')),

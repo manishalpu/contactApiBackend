@@ -1452,13 +1452,13 @@
         "affectsGlobalScope": false
       },
       "../src/contacts/contacts.service.ts": {
-        "version": "8cd8c338ce545abec5f5c24476e560b0ba2255c0a70eadc52c670251b19453dd",
-        "signature": "422fd7dc0583e61f39e171ed68307ef29db61e9be250d46ebba3155bef2ca037",
+        "version": "6590e8e2e017a80f77daee7122e30501ab75b3a0a1d0dfe7a5804786a2eb7186",
+        "signature": "29a01bbee1a34584178f9434889daee473649514a523bee199961426b2e5f1ff",
         "affectsGlobalScope": false
       },
       "../src/contacts/contacts.controller.ts": {
-        "version": "c4f2fc6c28ed7c6c34a2c4305d4b9a6bc5135d6288795a893ee5b44d01aa56f6",
-        "signature": "9619f0d84d1e89bea9d021dd5ea9a732ec90ce25b15c5cb161ff60abda006de7",
+        "version": "e9ab3037c85e1a485ce7a25cc0b6a501187bc215aaa590682d54a8ca44bd4477",
+        "signature": "83a0688fff6edaaea721e8e7942be7f85826d785e02b8e4f80e3b5b0af739ea8",
         "affectsGlobalScope": false
       },
       "../src/contacts/contact.schema.ts": {

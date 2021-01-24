@@ -36,6 +36,15 @@ let ContactsService = class ContactsService {
         }
         return undefined;
     }
+    async findByEmail(emailId) {
+        const dataFromDB = await this.findAll();
+        for (const data of dataFromDB) {
+            if (data && data.emailId && data.emailId === emailId) {
+                return data;
+            }
+        }
+        return undefined;
+    }
     async deleteByName(name) {
         const dataFromDB = await this.findAll();
         for (const data of dataFromDB) {

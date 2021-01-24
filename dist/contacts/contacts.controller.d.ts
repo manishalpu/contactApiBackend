@@ -7,6 +7,7 @@ export declare class ContactsController {
     create(createContactDto: CreateContactDto): Promise<void>;
     findAll(): Promise<ContactInterface[]>;
     findByName(name: string): Promise<ContactInterface>;
+    findByemail(emailId: string): Promise<ContactInterface>;
     deleteByName(name: string): Promise<void>;
     updateByName(name: string, body: any): Promise<ContactInterface>;
 }

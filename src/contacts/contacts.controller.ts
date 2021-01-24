@@ -17,7 +17,7 @@ export class ContactsController {
         return this.contactsService.findAll();
     }
 
-    @Get(':name')
+    @Get('name/:name')
     async findByName(@Param('name') name:string ){
         console.log(name);
         const response = await this.contactsService.findByName(name);
@@ -26,6 +26,17 @@ export class ContactsController {
             throw new HttpException('No contact with '+name,HttpStatus.NOT_FOUND); 
         return response;
     }
+
+    @Get('email/:emailId')
+    async findByemail(@Param('emailId') emailId:string ){
+        console.log(emailId);
+        const response = await this.contactsService.findByEmail(emailId);
+        console.log(response);
+        if(!response)
+            throw new HttpException('No contact with '+emailId,HttpStatus.NOT_FOUND); 
+        return response;
+    }
+
     @Delete(':name')
     async deleteByName(@Param('name') name:string)
     {
