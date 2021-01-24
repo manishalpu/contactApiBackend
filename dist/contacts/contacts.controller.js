@@ -34,6 +34,17 @@ let ContactsController = class ContactsController {
             throw new common_1.HttpException('No contact with ' + name, common_1.HttpStatus.NOT_FOUND);
         return response;
     }
+    async deleteByName(name) {
+        const response = await this.contactsService.deleteByName(name);
+        if (!response)
+            throw new common_1.HttpException('Not able to delete contact', common_1.HttpStatus.FORBIDDEN);
+    }
+    async updateByName(name, body) {
+        const response = await this.contactsService.updateByName(name, body);
+        if (!response)
+            throw new common_1.HttpException('Not able to delete contact', common_1.HttpStatus.FORBIDDEN);
+        return response;
+    }
 };
 __decorate([
     common_1.Post(),
@@ -55,6 +66,20 @@ __decorate([
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], ContactsController.prototype, "findByName", null);
+__decorate([
+    common_1.Delete(':name'),
+    __param(0, common_1.Param('name')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Promise)
+], ContactsController.prototype, "deleteByName", null);
+__decorate([
+    common_1.Put(':name'),
+    __param(0, common_1.Param('name')), __param(1, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, Object]),
+    __metadata("design:returntype", Promise)
+], ContactsController.prototype, "updateByName", null);
 ContactsController = __decorate([
     common_1.Controller('contacts'),
     __metadata("design:paramtypes", [contacts_service_1.ContactsService])

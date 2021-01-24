@@ -44,13 +44,19 @@ export class ContactsService{
         return undefined;
     }
 
-    async updateByName(name: string)
+    async updateByName(name: string, body:any)
     {
         const dataFromDB = await this.findAll();
         for(const data of dataFromDB)
         {
             if(data && data.name && data.name === name)
             {
+                if(body.name)
+                    data.name = body.name;
+                if(body.phoneNumber)
+                    data.phoneNumber = body.phoneNumber;
+                if(body.emailId)
+                    data.emailId = body.emailId;
                 return data;
             }
         }

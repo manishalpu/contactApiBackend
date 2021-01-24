@@ -7,4 +7,6 @@ export declare class ContactsService {
     create(createContactDto: CreateContactDto): Promise<Contact>;
     findAll(): Promise<Contact[]>;
     findByName(name: string): Promise<Contact>;
+    deleteByName(name: string): Promise<Contact>;
+    updateByName(name: string, body: any): Promise<Contact>;
 }

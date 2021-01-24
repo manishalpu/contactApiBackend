@@ -37,8 +37,9 @@ export class ContactsController {
     @Put(':name')
     async updateByName(@Param('name') name:string, @Body() body: any)
     {
-        const response = await this.contactsService.updateByName(name);
+        const response = await this.contactsService.updateByName(name,body);
         if(!response)
             throw new HttpException('Not able to delete contact',HttpStatus.FORBIDDEN);
+        return response;
     }
 }

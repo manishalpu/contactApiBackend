@@ -1187,8 +1187,8 @@
         "affectsGlobalScope": false
       },
       "../src/contacts/dto/create-contact.dto.ts": {
-        "version": "e700b3e36d8304892c803eaab219677eb412aed71fed91731a59bbc5682e82c7",
-        "signature": "7bd1bfc5f6269976de4a13d722ffdb806feed73573004e19c6876e220bb27fea",
+        "version": "227692beb59693e9f1f07c435e8ad26e137db50965b04c8e28823aaa4b9c6a0c",
+        "signature": "f9f4be077b66adc4df71ee5b70681b0c5911108b18da62246326a7567af87720",
         "affectsGlobalScope": false
       },
       "../node_modules/@types/node/globals.d.ts": {
@@ -1442,8 +1442,8 @@
         "affectsGlobalScope": false
       },
       "../src/contacts/interfaces/contact.interface.ts": {
-        "version": "f23aeb852562ed5a4c40dc2bfdcd5c93b9c27af1d91df87d7b42d12ab0d6b09b",
-        "signature": "7985bb932b08547a8339cbf2a350cbfa68e9c2a51d53b592dc9e489eef371898",
+        "version": "eaed7cba76d7cc50cc3adc90d24b317e4ab9e74578599e22193e8abf66857ae2",
+        "signature": "41770c2064c9fa18e3bfe62d5561fcb27cb4c749c83437af0568e46c8a861869",
         "affectsGlobalScope": false
       },
       "../src/constants/constants.ts": {
@@ -1452,13 +1452,13 @@
         "affectsGlobalScope": false
       },
       "../src/contacts/contacts.service.ts": {
-        "version": "6ea49332b54e0365e5966ad89fbe1d191b4d767cd10778dc28b1376cc5ac69c0",
-        "signature": "bb10daae834413764503f50d0cf70761f6aa4aa91543abaa5220d73c13ef88e1",
+        "version": "8cd8c338ce545abec5f5c24476e560b0ba2255c0a70eadc52c670251b19453dd",
+        "signature": "422fd7dc0583e61f39e171ed68307ef29db61e9be250d46ebba3155bef2ca037",
         "affectsGlobalScope": false
       },
       "../src/contacts/contacts.controller.ts": {
-        "version": "e9dc246429feab1e5602a87797d7010a93ca89f12f40e38cab9a6a0798b28409",
-        "signature": "e96a877e0bcd1b5ba50100584228cc83ae880928adb8072eb81ff461b5efc7e4",
+        "version": "c4f2fc6c28ed7c6c34a2c4305d4b9a6bc5135d6288795a893ee5b44d01aa56f6",
+        "signature": "9619f0d84d1e89bea9d021dd5ea9a732ec90ce25b15c5cb161ff60abda006de7",
         "affectsGlobalScope": false
       },
       "../src/contacts/contact.schema.ts": {

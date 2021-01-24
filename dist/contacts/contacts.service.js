@@ -36,6 +36,32 @@ let ContactsService = class ContactsService {
         }
         return undefined;
     }
+    async deleteByName(name) {
+        const dataFromDB = await this.findAll();
+        for (const data of dataFromDB) {
+            if (data && data.name && data.name === name) {
+                const deletedData = data;
+                data.remove();
+                return deletedData;
+            }
+        }
+        return undefined;
+    }
+    async updateByName(name, body) {
+        const dataFromDB = await this.findAll();
+        for (const data of dataFromDB) {
+            if (data && data.name && data.name === name) {
+                if (body.name)
+                    data.name = body.name;
+                if (body.phoneNumber)
+                    data.phoneNumber = body.phoneNumber;
+                if (body.emailId)
+                    data.emailId = body.emailId;
+                return data;
+            }
+        }
+        return undefined;
+    }
 };
 ContactsService = __decorate([
     common_1.Injectable(),
